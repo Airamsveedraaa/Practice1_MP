@@ -1,16 +1,26 @@
 #ifndef FECHA_H
 #define FECHA_H
-
+#include "Comun.h"
 
 class Fecha
 {
+private:
+    int dia,mes,anio;
     public:
-        Fecha();
+        Fecha(const int &dia,const int &mes,const int &anio);
+        void setFecha(const int &dia, const int &mes,const int &anio);
+        int getDia()const;
+        int getMes()const;
+        int getAnio()const;
+        void ver()const;
+        bool bisiesto()const;
+        Fecha operator++(int);
+        Fecha& operator++();
+        Fecha operator+(int x)const;
+        Fecha operator+(const Fecha& f)const;
+        friend Fecha operator+(int &x,const Fecha& f);
         virtual ~Fecha();
-
-    protected:
-
-    private:
 };
 
+ Fecha operator+(int x,const Fecha& f);
 #endif // FECHA_H
