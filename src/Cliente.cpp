@@ -56,7 +56,7 @@ if(this!=&c){
     this->dni=c.dni;
     delete [] this->nombre;
     this->nombre=new char[strlen(c.nombre)+1];
-    strcpy(this->nombre,nombre);
+    strcpy(this->nombre,c.nombre);
     this->f=c.f;
 }
 

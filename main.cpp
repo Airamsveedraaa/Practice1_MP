@@ -2,6 +2,7 @@
 #include "Cliente.h"
 int main()
 {
+    /*MAIN DE LA PRIMERA PARTE
     Fecha f1(29,2,2001), f3(29,2,2004), f4(29,2,1900); //Fecha f5; //no permitido
     const Fecha f2=f1; //indica que metodo se esta ejecutando aqui
     f1.setFecha(f3.getDia()-3, f3.getMes()-2, 2007); //29-3/2-2/2007 --> f1=26/1/2007
@@ -48,5 +49,8 @@ int main()
     delete p;
     p = NULL;
     system("PAUSE");
-    return 0;
+    return 0;*/
+
+
+    //MAIN DE LA SEGUNDA PARTE
 }

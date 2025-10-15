@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1760525541 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
+1760533366 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
 	"Fecha.h"
 	"Cliente.h"
 
-1760532512 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\cliente.cpp
+1760532748 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\cliente.cpp
 	"Cliente.h"
 
 1760532512 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\cliente.h
@@ -19,4 +19,11 @@
 	<cstdlib>
 	<iostream>
 	<cstring>
+
+1760533734 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1760533590 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
+	"Comun.h"
+	"Fecha.h"
 
