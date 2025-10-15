@@ -63,6 +63,14 @@ void Fecha::ver()const
 
 }
 
+void Fecha::ver(ostream& s) const {
+    const char* meses[] = {"", "ene", "feb", "mar", "abr", "may", "jun",
+                           "jul", "ago", "sep", "oct", "nov", "dic"};
+
+    if(this->dia < 10) s << "0";
+    s << this->dia << " " << meses[this->mes] << " " << this->anio;
+}
+
 bool Fecha::bisiesto()const
 {
 

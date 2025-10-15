@@ -10,6 +10,7 @@ private:
     Fecha f;
     public:
         Cliente(const long int& dni,const char* nombre,const Fecha& f);
+        Cliente(const Cliente& c);
         void setNombre(const char* nombre);
         long int getDni()const;
         const char* getNombre()const;

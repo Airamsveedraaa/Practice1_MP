@@ -9,6 +9,14 @@ Cliente::Cliente(const long int& dni,const char* nombre, const Fecha& f):f(f)
     //ctor
 }
 
+Cliente::Cliente(const Cliente& c):f(c.f){
+
+this->dni=c.dni;
+this->nombre=new char[strlen(c.nombre)+1];
+strcpy(this->nombre,c.nombre);
+
+}
+
 void Cliente::setNombre(const char* nombre){
 
 delete [] this->nombre;
@@ -71,7 +79,9 @@ return true;
 
 ostream& operator <<(ostream& s,const Cliente& c){
 
-s << c.getNombre() << "(" << c.getDni() << "-" << c.getFecha() << ")";
+s << c.getNombre() << "(" << c.getDni() << " - ";
+c.getFecha().ver(s);
+s << ")";
 
 return s;
 }

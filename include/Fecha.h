@@ -13,6 +13,7 @@ private:
         int getMes()const;
         int getAnio()const;
         void ver()const;
+        void ver(ostream& s) const;
         bool bisiesto()const;
         Fecha operator++(int i);
         Fecha& operator++();
