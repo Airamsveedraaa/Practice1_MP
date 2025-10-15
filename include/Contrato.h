@@ -5,18 +5,23 @@
 class Contrato
 {
 private:
-    static int idContrato;
+    static int contador;
+    const int idContrato;
     long int dniContrato;
     Fecha fechaContrato;
     public:
-        Contrato(const long int &dni,const Fecha &fechaContrato);
+        Contrato(const long int& dni,const Fecha &fechaContrato);
         Contrato(const Contrato &c);
-        static int getLimiteMniutos();
-        static int getPrecio();
         virtual ~Contrato();
-        virtual void ver() const=0;
+        virtual void ver(ostream& s)const;
+        virtual float factura()const=0;
         static int getIdContrato();
+        long int getDniContrato()const;
+        const Fecha& getFechaContrato()const;
+        void setDniContrato(const long int& dni);
+        void setFechaContrato(const Fecha& f);
+        friend ostream& operator<<(ostream& s,const Contrato& c);
 
 };
-
+ostream& operator<<(ostream& s,const Contrato& c);
 #endif // CONTRATO_H

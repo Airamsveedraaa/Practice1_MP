@@ -1,4 +1,4 @@
-//#include "ContratoTP.h"
+#include "ContratoTP.h"
 
 ContratoTP::ContratoTP()
 {
