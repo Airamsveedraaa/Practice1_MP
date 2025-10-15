@@ -61,6 +61,7 @@ this->fechaContrato.setFecha(f.getDia(),f.getMes(),f.getAnio());
 
 }
 
+
 Contrato::~Contrato()
 {
     //dtor
