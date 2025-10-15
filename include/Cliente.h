@@ -10,9 +10,9 @@ private:
     Fecha f;
     public:
         Cliente(const long int& dni,const char* nombre,const Fecha& f);
-        void setNombre(char* nombre);
+        void setNombre(const char* nombre);
         long int getDni()const;
-        char* getNombre()const;
+        const char* getNombre()const;
         Fecha getFecha()const;
         void setFecha(const Fecha& f);
         Cliente operator=(const Cliente& c);

@@ -73,7 +73,7 @@ bool Fecha::bisiesto()const
 
 }
 
-Fecha Fecha::operator++(int)
+Fecha Fecha::operator++(int i)
 {
 
     Fecha incr=*this;
@@ -103,7 +103,7 @@ Fecha& Fecha::operator++()
     return *this;
 }
 
-Fecha Fecha::operator+(int x)const
+Fecha Fecha::operator+(const int &x)const
 {
 
     Fecha incr=*this;
@@ -144,6 +144,17 @@ return incr;
 Fecha operator+(int x,const Fecha& f)
 {
     return f+x;
+}
+
+ostream& operator<<(ostream& s,const Fecha& f){
+
+if(f.dia < 10) s << "0";
+    s << f.dia << "/";
+if(f.mes < 10) s << "0";
+    s << f.mes << "/" << f.anio;
+
+return s;
+
 }
 Fecha::~Fecha()
 {

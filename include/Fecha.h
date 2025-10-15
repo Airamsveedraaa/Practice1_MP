@@ -14,13 +14,15 @@ private:
         int getAnio()const;
         void ver()const;
         bool bisiesto()const;
-        Fecha operator++(int);
+        Fecha operator++(int i);
         Fecha& operator++();
-        Fecha operator+(int x)const;
+        Fecha operator+(const int &x)const;
         Fecha operator+(const Fecha& f)const;
         friend Fecha operator+(int &x,const Fecha& f);
+        friend ostream& operator<<(ostream& s,const Fecha& f);
         virtual ~Fecha();
 };
 
  Fecha operator+(int x,const Fecha& f);
+ ostream& operator<<(ostream& s,const Fecha& f);
 #endif // FECHA_H
