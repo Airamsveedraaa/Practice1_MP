@@ -15,9 +15,9 @@ private:
         virtual ~Contrato();
         virtual void ver(ostream& s)const;
         virtual float factura()const=0;
-        static int getIdContrato();
-        long int getDniContrato()const;
-        const Fecha& getFechaContrato()const;
+        static int getIdContrato(){return Contrato::contador;};
+        long int getDniContrato() const{return this->dniContrato;};
+        const Fecha& getFechaContrato() const{return this->fechaContrato;};
         void setDniContrato(const long int& dni);
         void setFechaContrato(const Fecha& f);
         friend ostream& operator<<(ostream& s,const Contrato& c);

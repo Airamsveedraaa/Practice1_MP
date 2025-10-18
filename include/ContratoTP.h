@@ -10,10 +10,30 @@ private:
     static int minutosTP;
     int minutosHablados;
     static const float precioExcesoMinutos;
-    public:
-        ContratoTP(const long int& dni,const Fecha& f,const int& m);
-        virtual ~ContratoTP();
-
+public:
+    ContratoTP(const long int& dni,const Fecha& f,const int& m);
+    virtual ~ContratoTP();
+    ContratoTP(const ContratoTP& c);
+    static int getLimiteMinutos()
+    {
+        return ContratoTP::minutosTP;
+    };
+    static float getPrecio()
+    {
+        return ContratoTP::precioTP;
+    };
+    static void setTarifaPlana(int m,float p)
+    {
+        ContratoTP::minutosTP=m; ContratoTP::precioTP=p;
+    };
+    int getMinutosHablados()const
+    {
+        return minutosHablados;
+    };
+    void setMinutosHablados(int m)
+    {
+        minutosHablados=m;
+    };
 
 };
 

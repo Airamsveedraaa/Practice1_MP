@@ -30,25 +30,6 @@ return s;
 
 }
 
-int Contrato::getIdContrato(){
-
-return contador;
-
-}
-
-
-long int Contrato::getDniContrato()const{
-
-return this->dniContrato;
-
-}
-
-const Fecha& Contrato::getFechaContrato()const{
-
-return this->fechaContrato;
-
-}
-
 void Contrato::setDniContrato(const long int& dni){
 
 this->dniContrato=dni;
