@@ -15,6 +15,12 @@ this->dniContrato=c.dniContrato;
 
 }
 
+void Contrato::ver()const{
+
+ver(cout);
+
+}
+
 void Contrato::ver(ostream& s)const{
 
 s <<this->dniContrato << "(" << this->idContrato << "-";
