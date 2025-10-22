@@ -58,7 +58,7 @@ int main()
     return 0;*/
 
 
-    //MAIN DE LA SEGUNDA PARTE
+    /*MAIN DE LA SEGUNDA PARTE
     Fecha f1(29,2,2001), f2(f1), f3(29,2,2004);
  cout << "Fechas: ";
  f1.ver(); cout << ", "; f2.ver(); cout << ", "; f3.ver(); cout << endl;
@@ -95,6 +95,9 @@ for(int i=0; i<4; i++) {
 t[i]->setFechaContrato(t[i]->getFechaContrato()+2);
 t[i]->ver(); cout << endl;
 }
+*/
+
+    //MAIN ULTIMA PARTE
 
  system("PAUSE");
  return 0;

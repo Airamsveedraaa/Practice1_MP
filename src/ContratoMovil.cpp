@@ -12,7 +12,6 @@ ContratoMovil::ContratoMovil(const long int&dni,const Fecha& f,const float& p,co
 ContratoMovil::ContratoMovil(const ContratoMovil& c):Contrato(c)
 {
 
-delete [] this->nacionalidad;
 this->nacionalidad=new char[strlen(c.nacionalidad)+1];
 strcpy(this->nacionalidad,c.nacionalidad);
 this->precio=c.precio;
@@ -49,7 +48,7 @@ void ContratoMovil::setNacionalidad(const char* nac){
 
 delete [] this->nacionalidad;
 
-this->nacionalidad=new char(strlen(nac)+1);
+this->nacionalidad=new char[(strlen(nac)+1)];
 strcpy(this->nacionalidad,nac);
 
 }
