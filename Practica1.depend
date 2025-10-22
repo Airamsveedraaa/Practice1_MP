@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1761137483 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
+1761138837 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
 	"Fecha.h"
 	"Cliente.h"
 	"Contrato.h"
@@ -30,19 +30,19 @@
 1760827891 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
 	"Contrato.h"
 
-1760827891 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
+1761138860 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
 	"Comun.h"
 	"Fecha.h"
 
-1761137248 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
+1761137508 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
 	"ContratoMovil.h"
 
-1760827850 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
+1761138037 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
 	<Contrato.h>
 
-1761137046 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
+1761137508 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
 	"ContratoTP.h"
 
-1760827813 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h
+1761138037 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h
 	<Contrato.h>
 
