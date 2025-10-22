@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1760827776 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
+1761137483 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\main.cpp
 	"Fecha.h"
 	"Cliente.h"
 	"Contrato.h"
 	"ContratoTP.h"
 	"ContratoMovil.h"
 	"Comun.h"
+	<windows.h>
 
 1760532748 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\cliente.cpp
 	"Cliente.h"
@@ -19,11 +20,12 @@
 1760526270 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\fecha.h
 	"Comun.h"
 
-1760827776 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\comun.h
+1761137312 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\comun.h
 	<cstdlib>
 	<iostream>
 	<cstring>
 	<iomanip>
+	<windows.h>
 
 1760827891 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
 	"Contrato.h"
@@ -32,13 +34,13 @@
 	"Comun.h"
 	"Fecha.h"
 
-1760827850 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
+1761137248 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
 	"ContratoMovil.h"
 
 1760827850 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
 	<Contrato.h>
 
-1760827813 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
+1761137046 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
 	"ContratoTP.h"
 
 1760827813 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h

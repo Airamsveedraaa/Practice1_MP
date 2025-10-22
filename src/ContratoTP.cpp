@@ -11,7 +11,7 @@ ContratoTP::ContratoTP(const long int& dni,const Fecha& f,const int& m):Contrato
     //ctor
 }
 
-ContratoTP::ContratoTP(const ContratoTP& c):Contrato(c.getDniContrato(),c.getFechaContrato())
+ContratoTP::ContratoTP(const ContratoTP& c):Contrato(c)
 {
 
     this->minutosHablados=c.minutosHablados;
@@ -30,22 +30,24 @@ float ContratoTP::factura()const
 
 void ContratoTP::ver()const{
 
-ver(cout);
+Contrato::ver();
+cout << " " << this->minutosHablados << "m, " << ContratoTP::minutosTP << "(" << ContratoTP::precioTP << ")";
 
 }
 
 void ContratoTP::ver(ostream& s)const
 {
 
-    Contrato::ver(s);
-    s<<" " << minutosHablados << "m, " << minutosTP << "(" << precioTP << ")";
+s << this->getDniContrato() << "(" << this->getIdContrato() << " - ";
+this->getFechaContrato().ver(s);
+s << ")" << this->minutosHablados << "m, " << ContratoTP::minutosTP << "(" << fixed << setprecision(2) << ContratoTP::precioTP << ") - "
+  << this->factura() << "€";
 
 }
 
 ostream& operator<<(ostream& s,const ContratoTP& c){
 
-s << (Contrato &)c;
-s << " - " << c.factura() << "€";
+c.ver(s);
 return s;
 
 }

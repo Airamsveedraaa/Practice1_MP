@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
+#include <windows.h>
 
 using namespace std;
 

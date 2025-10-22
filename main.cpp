@@ -4,8 +4,10 @@
 #include "ContratoTP.h"
 #include "ContratoMovil.h"
 #include "Comun.h"
+#include <windows.h>
 int main()
 {
+
     /*MAIN DE LA PRIMERA PARTE
     Fecha f1(29,2,2001), f3(29,2,2004), f4(29,2,1900); //Fecha f5; //no permitido
     const Fecha f2=f1; //indica que metodo se esta ejecutando aqui

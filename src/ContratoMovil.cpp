@@ -9,7 +9,7 @@ ContratoMovil::ContratoMovil(const long int&dni,const Fecha& f,const float& p,co
     //ctor
 }
 
-ContratoMovil::ContratoMovil(const ContratoMovil& c):Contrato(c.getDniContrato(),c.getFechaContrato())
+ContratoMovil::ContratoMovil(const ContratoMovil& c):Contrato(c)
 {
 
 delete [] this->nacionalidad;
@@ -29,15 +29,19 @@ return this->precio*this->minutosHablados;
 
 void ContratoMovil::ver()const{
 
-ver(cout);
+Contrato::ver();
+
+cout << " " << this->minutosHablados << "m, " << this->nacionalidad << " " << this->precio;
 
 }
 
 void ContratoMovil::ver(ostream& s)const{
 
-Contrato::ver(s);
-
-s << " " << this->minutosHablados << "m, " << this->nacionalidad << " " << this->precio;
+s << this->getDniContrato() << "(" << this->getIdContrato() << " - ";
+this->getFechaContrato().ver(s);
+s << ") " << this->minutosHablados << "m, " << this->nacionalidad
+  << " " << fixed << setprecision(2) << this->precio << " - "
+  << this->factura() << "€";
 
 }
 
@@ -52,9 +56,7 @@ strcpy(this->nacionalidad,nac);
 
 ostream& operator<<(ostream& s,const ContratoMovil& c){
 
-s << (Contrato &)c;
-s << " " << c.getMinutosHablados() << "m, " << c.getNacionalidad() << " " << c.getPrecioMinuto() << " - " ;
-s << c.factura() << "€";
+c.ver(s);
 return s;
 
 
@@ -62,5 +64,6 @@ return s;
 
 ContratoMovil::~ContratoMovil()
 {
+    delete [] this->nacionalidad;
     //dtor
 }
