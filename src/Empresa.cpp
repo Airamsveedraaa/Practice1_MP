@@ -219,3 +219,57 @@ bool Empresa::bajaCliente(long int dni)
 
     return encontrado;
 }
+
+
+int Empresa::nContratosTP()const{
+
+int contador=0;
+
+int i=0;
+
+while(i<ncon){
+    if(typeid(*contratos[i])==typeid(ContratoTP)){
+        //si coincide quiere decir que el contrato es del tipo q busco
+        //incrementar contador
+        contador++;
+    }
+    i++;
+}
+return contador;
+}
+
+
+int Empresa::descuento(float porcentaje)const{
+
+
+int contador=0;
+
+porcentaje=1- porcentaje/100;
+
+int i=0;
+while(i<ncon){
+    if(ContratoMovil *c= dynamic_cast<ContratoMovil*>(contratos[i])){
+       c->setPrecioMinuto(c->getPrecioMinuto()*porcentaje);
+       contador++;
+       }
+       i++;
+    }
+return contador;
+}
+
+
+void Empresa::cargarDatos() {
+ Fecha f1(29,2,2001), f2(31,1,2002), f3(1,2,2002);
+ this->clientes[0] = new Cliente(75547001, "Peter Lee", f1);
+ this->clientes[1] = new Cliente(45999000, "Juan Perez", Fecha(29,2,2000));
+ this->clientes[2] = new Cliente(37000017, "Luis Bono", f2);
+ this->ncli=3;
+ this->contratos[0] = new ContratoMovil(75547001, f1, 0.12, 110, "DANES"); //habla 110m a 0.12€/m
+ this->contratos[1] = new ContratoMovil(75547001, f2, 0.09, 170, "DANES"); //habla 170m a 0.09€/m
+ this->contratos[2] = new ContratoTP(37000017, f3, 250); //habla 250m (300m a 10€, exceso 0.15€/m)
+ this->contratos[3] = new ContratoTP(75547001, f1, 312); //habla 312m (300m a 10€, exceso 0.15€/m)
+ this->contratos[4] = new ContratoMovil(45999000, f2, 0.10, 202, "ESPAÑOL"); //habla 202m a 0.10/m
+ this->contratos[5] = new ContratoMovil(75547001, f2, 0.15, 80, "DANES"); //habla 80m a 0.15€/m
+ this->contratos[6] = new ContratoTP(45999000, f3, 400); //habla 400m (300m a 10€, exceso 0.15€/m)
+ this->ncon=7;
+}
