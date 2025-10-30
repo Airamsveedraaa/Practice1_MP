@@ -29,34 +29,36 @@
 1760522670 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\fecha.h
 	"Comun.h"
 
-1761133712 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\comun.h
+1761835564 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\comun.h
 	<cstdlib>
 	<iostream>
 	<cstring>
 	<iomanip>
 	<windows.h>
+	<typeinfo>
 
-1761137271 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
+1761835276 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
 	"Contrato.h"
 
-1761137271 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
+1761835859 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
 	"Comun.h"
 	"Fecha.h"
 
-1761136160 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
+1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
 	"ContratoMovil.h"
 
 1761134437 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
 	<Contrato.h>
 
-1761133908 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
+1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
 	"ContratoTP.h"
 
 1761134437 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h
 	<Contrato.h>
 
-1761772543 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\empresa.cpp
+1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\empresa.cpp
 	"Empresa.h"
+	<typeinfo>
 
 1761772509 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\empresa.h
 	"Fecha.h"

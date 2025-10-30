@@ -16,7 +16,7 @@ private:
         virtual void ver()const;
         virtual void ver(ostream& s)const;
         virtual float factura()const=0;
-        static int getIdContrato(){return Contrato::contador;};
+        int getIdContrato()const{return this->idContrato;};
         long int getDniContrato() const{return this->dniContrato;};
         const Fecha& getFechaContrato() const{return this->fechaContrato;};
         void setDniContrato(const long int& dni);

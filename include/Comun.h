@@ -6,6 +6,7 @@
 #include <cstring>
 #include <iomanip>
 #include <windows.h>
+#include <typeinfo>
 
 using namespace std;
 

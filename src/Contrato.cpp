@@ -24,7 +24,7 @@ ver(cout);
 void Contrato::ver(ostream& s)const{
 
 s <<this->dniContrato << "(" << this->idContrato << "-";
- this->fechaContrato.ver();
+ this->fechaContrato.ver(s);
 s << ")";
 
 }
