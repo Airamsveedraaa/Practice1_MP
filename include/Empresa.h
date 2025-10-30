@@ -34,6 +34,7 @@ class Empresa{
     bool bajaCliente(long int dni);        //true si el Cliente existe, false si no
     int descuento (float porcentaje) const; //devuelve a cuantos aplica el descuento
     int nContratosTP() const;
+    void ver() const;
     void cargarDatos();//crea 3 clientes y 7 contratos. metodo creado para no
 };                     //tener que meter datos cada vez que pruebo el programa
 
