@@ -1,34 +1,14 @@
 #include "Fecha.h"
 
 
-Fecha::Fecha(const int &dia,const int &mes,const int &anio)
+Fecha::Fecha( int dia, int mes, int anio)
 {
-    setFecha(dia,mes,anio);
+    this->setFecha(dia,mes,anio);
     //ctor
 }
 
-Fecha::getAnio()const
-{
 
-    return this->anio;
-
-}
-
-Fecha::getDia()const
-{
-
-    return this->dia;
-
-}
-
-Fecha::getMes()const
-{
-
-    return this->mes;
-
-}
-
-void Fecha::setFecha(const int &dia,const int &mes,const int &anio)
+void Fecha::setFecha( int dia, int mes, int anio)
 {
 
     int dmax,diaMes[]= {0,31,28,31,30,31,30,31,31,30,31,30,31};
@@ -63,13 +43,6 @@ void Fecha::ver()const
 
 }
 
-void Fecha::ver(ostream& s) const {
-    const char* meses[] = {"", "ene", "feb", "mar", "abr", "may", "jun",
-                           "jul", "ago", "sep", "oct", "nov", "dic"};
-
-    if(this->dia < 10) s << "0";
-    s << this->dia << " " << meses[this->mes] << " " << this->anio;
-}
 
 bool Fecha::bisiesto()const
 {
@@ -84,9 +57,22 @@ bool Fecha::bisiesto()const
 Fecha Fecha::operator++(int i)
 {
 
-    Fecha incr=*this;
-    ++*this;
-    return incr;
+    Fecha copia = *this; //guardo una copia de la fecha.
+    //Incremento la fecha original.
+    int dmax, diaMes[] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+    if (this->bisiesto()) //si el año es bisiesto febrero tiene 29 dias
+      diaMes[2]=29;
+    dmax=diaMes[this->mes];
+    this->dia++;
+    if (this->dia>dmax) { //si al incrementar dia superamos el numero de dias de dicho mes
+        this->dia=1;      //pasamos a 1
+        this->mes++;      //del mes siguiente
+            if (this->mes>12) { //si al incrementar mes pasamos de 12 meses
+                this->mes=1;    //pasamos al mes 1
+                this->anio++;   //del año siguiente
+            }
+    }
+    return copia; // Devuelvo la copia antes de ser incrementada.
 
 }
 
@@ -114,28 +100,10 @@ Fecha& Fecha::operator++()
 Fecha Fecha::operator+(const int &x)const
 {
 
-    Fecha incr=*this;
-    int diaMes[]= {0,31,28,31,30,31,30,31,31,30,31,30,31};
-    for(int i=0; i<x; i++)
-    {
-        if(incr.bisiesto())
-            diaMes[2]=29;
-        else
-            diaMes[2]=28;
-        int dMax=diaMes[incr.mes];
-        incr.dia++;
-        if(incr.dia > dMax)
-        {
-            incr.dia=1;
-            incr.mes++;
-            if(incr.mes > 12)
-            {
-                incr.mes=1;
-                incr.anio++;
-            }
-        }
-    }
-    return incr;
+    Fecha f=*this;
+    for(int j=0;j<x;j++)
+        f++;
+    return f;
 }
 
 Fecha Fecha::operator+(const Fecha& f)const{
@@ -151,15 +119,21 @@ return incr;
 
 Fecha operator+(int x,const Fecha& f)
 {
-    return f+x;
+    Fecha fech=f;
+    for(int j=0;j<x;j++)
+        ++fech;
+    return fech;
 }
 
 ostream& operator<<(ostream& s,const Fecha& f){
 
-if(f.dia < 10) s << "0";
-    s << f.dia << "/";
-if(f.mes < 10) s << "0";
-    s << f.mes << "/" << f.anio;
+ char *nombreMes[] = {"error", "ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"};
+  if (f.dia < 10)
+    s << "0";
+  s << f.dia << " ";
+
+  s << nombreMes[f.mes] << " " << f.anio;
+
 
 return s;
 

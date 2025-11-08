@@ -10,7 +10,7 @@ private:
     float precio;
     int minutosHablados;
     public:
-        ContratoMovil(const long int& dni,const Fecha& f,const float& p, const int& m, const char* nac);
+        ContratoMovil(long int dni,const Fecha& f,float p, int m, char* nac);
         virtual ~ContratoMovil();
         ContratoMovil(const ContratoMovil& c);
         float getPrecioMinuto()const{return this->precio;};
@@ -20,7 +20,6 @@ private:
         void setMinutosHablados(int m){this->minutosHablados=m;};
         void setNacionalidad(const char* nac);
         void ver()const;
-        void ver(ostream& s) const;
         float factura() const;
         friend ostream& operator<<(ostream& s,const ContratoMovil& c);
 };

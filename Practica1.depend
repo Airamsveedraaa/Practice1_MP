@@ -17,16 +17,16 @@
 	"ContratoMovil.h"
 	"Empresa.h"
 
-1760529148 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\cliente.cpp
+1762599149 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\cliente.cpp
 	"Cliente.h"
 
-1760528912 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\cliente.h
+1762597782 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\cliente.h
 	"Fecha.h"
 
-1760522670 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\fecha.cpp
+1762600572 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\fecha.cpp
 	"Fecha.h"
 
-1760522670 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\fecha.h
+1762599175 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\fecha.h
 	"Comun.h"
 
 1761835564 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\comun.h
@@ -37,23 +37,23 @@
 	<windows.h>
 	<typeinfo>
 
-1761835276 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
+1762600719 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contrato.cpp
 	"Contrato.h"
 
-1761835859 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
+1762599149 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contrato.h
 	"Comun.h"
 	"Fecha.h"
 
-1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
+1762600381 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratomovil.cpp
 	"ContratoMovil.h"
 
-1761134437 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
+1762597782 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratomovil.h
 	<Contrato.h>
 
-1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
+1762600381 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\contratotp.cpp
 	"ContratoTP.h"
 
-1761134437 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h
+1762597782 c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\include\contratotp.h
 	<Contrato.h>
 
 1761835564 source:c:\users\airam\desktop\uni\segundo\mp\practicas\p1\practica1\src\empresa.cpp

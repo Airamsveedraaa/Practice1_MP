@@ -10,17 +10,16 @@ private:
     long int dniContrato;
     Fecha fechaContrato;
     public:
-        Contrato(const long int& dni,const Fecha &fechaContrato);
+        Contrato(long int dni,const Fecha& fechaContrato);
         Contrato(const Contrato &c);
         virtual ~Contrato();
         virtual void ver()const;
-        virtual void ver(ostream& s)const;
         virtual float factura()const=0;
         int getIdContrato()const{return this->idContrato;};
         long int getDniContrato() const{return this->dniContrato;};
         const Fecha& getFechaContrato() const{return this->fechaContrato;};
-        void setDniContrato(const long int& dni);
-        void setFechaContrato(const Fecha& f);
+        void setDniContrato( long int dni){this->dniContrato=dni;};
+        void setFechaContrato(const Fecha& f){this->fechaContrato.setFecha(f.getDia(),f.getMes(),f.getAnio());};
         friend ostream& operator<<(ostream& s,const Contrato& c);
 
 };

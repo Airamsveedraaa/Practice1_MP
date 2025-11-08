@@ -9,14 +9,14 @@ private:
     char* nombre;
     Fecha f;
     public:
-        Cliente(const long int& dni,const char* nombre,const Fecha& f);
+        Cliente(long int dni,char* nombre,const Fecha& f);
         Cliente(const Cliente& c);
         void setNombre(const char* nombre);
-        long int getDni()const;
-        const char* getNombre()const;
-        Fecha getFecha()const;
+        long int getDni()const{return this->dni;};
+        const char* getNombre()const{return this->nombre;};
+        Fecha getFecha()const{return this->f;};
         void setFecha(const Fecha& f);
-        Cliente operator=(const Cliente& c);
+        Cliente& operator=(const Cliente& c);
         bool operator==(const Cliente& c) const;
         friend ostream& operator<<(ostream& s,const Cliente& c);
         virtual ~Cliente();

@@ -11,7 +11,7 @@ private:
     int minutosHablados;
     static const float precioExcesoMinutos;
 public:
-    ContratoTP(const long int& dni,const Fecha& f,const int& m);
+    ContratoTP(long int dni,const Fecha& f,int m);
     virtual ~ContratoTP();
     ContratoTP(const ContratoTP& c);
     static int getLimiteMinutos(){return ContratoTP::minutosTP;};
@@ -20,7 +20,6 @@ public:
     int getMinutosHablados()const{return minutosHablados;};
     void setMinutosHablados(int m){minutosHablados=m;};
     void ver()const;
-    void ver(ostream& s)const;
     float factura()const;
     friend ostream& operator<<(ostream& s,const ContratoTP& c);
 };

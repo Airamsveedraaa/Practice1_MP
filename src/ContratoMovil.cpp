@@ -1,6 +1,6 @@
 #include "ContratoMovil.h"
 
-ContratoMovil::ContratoMovil(const long int&dni,const Fecha& f,const float& p,const int& m,const char* nac):Contrato(dni,f)
+ContratoMovil::ContratoMovil( long int dni,const Fecha& f, float p, int m, char* nac):Contrato(dni,f)
 {
     this->precio=p;
     this->minutosHablados=m;
@@ -24,18 +24,12 @@ float ContratoMovil::factura()const
 void ContratoMovil::ver()const
 {
     Contrato::ver();
-    cout << " " << this->minutosHablados << "m, " << this->nacionalidad
-         << " " << this->precio;
+    cout << " " << this->minutosHablados << "m, ";
+    cout << this->getNacionalidad();
+    cout << " " << fixed << setprecision(2) << this->precio
+         << " - " << this->factura() << "E";
 }
 
-void ContratoMovil::ver(ostream& s)const
-{
-    s << this->getDniContrato() << " (" << this->getIdContrato() << " - ";
-    this->getFechaContrato().ver(s);
-    s << " ) " << this->minutosHablados << "m, " << this->nacionalidad
-      << " " << fixed << setprecision(2) << this->precio << " - "
-      << this->factura() << "€";
-}
 
 void ContratoMovil::setNacionalidad(const char* nac)
 {
@@ -46,7 +40,7 @@ void ContratoMovil::setNacionalidad(const char* nac)
 
 ostream& operator<<(ostream& s,const ContratoMovil& c)
 {
-    c.ver(s);
+    s << c.getDniContrato() << " (" << c.getIdContrato() << " - " << c.getFechaContrato() << " )"<<c.getMinutosHablados()<<"m, "<<c.getNacionalidad()<<" "<<c.getPrecioMinuto()<<" - "<<c.factura()<<"E"<<endl;
     return s;
 }
 
